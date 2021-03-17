@@ -1,0 +1,24 @@
+<view class="content">
+  
+  <view class="guide">
+    <text class="headline">游戏使用说明</text>
+    <text class="p">1. 用户首先需在首页选定好猜数字的难度等级（默认初级）；</text>
+    <text class="p">2. 然后点击首页的“猜数字”生成随机数开始游戏；</text>
+    <text class="p">3. 在游戏页面的数字框内输入你的数字猜想，当一组数据全部填完后会在下方显示猜想的正确性提示。若猜想数字且位置全部正确，则游戏结束，否则自动弹出下一组猜想输入框；</text>
+    <text class="p">4. 游戏结束时会上传本次游戏数据，记录至排名。</text>
+    <text class="p"></text>
+    <text class="p"></text>
+    <text class="p"></text>
+    <text class="headline">游戏等级提示</text>
+    <text class="p">1. 初级：1到6猜4个数；</text>
+    <text class="p">2. 中级：1到8猜5个数；</text>
+    <text class="p">3. 高级：0到9猜6个数；</text>
+    <text class="p">4. 一组随机数内无重复数字。</text>
+    <text class="p"></text>
+    <text class="p"></text>
+    <text class="p"></text>
+    <text class="headline">致谢</text>
+    <text class="p">1. 感谢 @伟大的污妖王 提供的创作灵感；</text>
+    <text class="p">2. 感谢 @Zero 对本小程序的实现。</text>
+  </view>
+</view>

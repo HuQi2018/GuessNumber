@@ -1,0 +1,27 @@
+.inputbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border-bottom: 2rpx solid #ddd; */
+  height: 150rpx;
+}
+
+.inputtexttop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30rpx;
+  border-top: 2rpx solid #ddd;
+  height: 50rpx;
+  text-align: center;
+}
+
+.inputtextbottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 30rpx;
+  border-bottom: 2rpx solid #ddd;
+  height: 50rpx;
+  text-align: center;
+}

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#00a2ff",
+  "navigationBarTitleText": "猜数字",
+  "navigationBarTextStyle": "white"
+}

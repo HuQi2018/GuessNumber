@@ -1,0 +1,80 @@
+<view class="content">
+  <view class="loginTitle">
+    <view class="{{currentTab==0?'select':'default'}}" data-current="0" bindtap="switchNav">初级</view>
+    <view class="{{currentTab==1?'select':'default'}}" data-current="1" bindtap="switchNav">中级</view>
+    <view class="{{currentTab==2?'select':'default'}}" data-current="2" bindtap="switchNav">高级</view>
+  </view>
+  <view class="hr"></view>
+
+  <!-- 定义模板1 template -->
+  <template name="msgItem">
+    <view class="item-box">
+      <!-- 所有项 -->
+      <view class="items">
+        <view wx:for="{{myList[currentTab]}}" wx:key="time" class="item" wx:if="{{index==0}}">
+          <view class='inner txt' wx:if="{{item.id==openid}}">
+            <!-- 排名 -->
+            <i>{{index+1}}</i>
+            <!-- 头像 -->
+            <image class="item-icon" mode="widthFix" src="{{item.header}}"></image>
+            <!-- 名字 -->
+            <i> {{item.name}}</i>
+            <!-- 用时 -->
+            <span class="item-data">
+              <i class="rankpace"> {{item.timeData}}</i>
+            </span>
+            <!-- 时间 -->
+            <!-- <span class="item-data">
+                <i class="rankpace"> {{item.date}}</i>
+              </span> -->
+          </view>
+          <view class='inner txt center' wx:elif="{{!openid}}">
+            <i>请先登录！</i>
+          </view>
+          <view class='inner txt center' wx:else>
+            <i>无个人记录</i>
+          </view>
+        </view>
+        <view class="item center">
+          <view>
+            <i>排名前20</i>
+          </view>
+        </view>
+        <!-- 每一项 -->
+        <view wx:for="{{list[currentTab]}}" wx:key="time" class="item" wx:if="{{index<20}}">
+          <view class='inner txt'>
+            <!-- 排名 -->
+            <i>{{index+1}}</i>
+            <!-- 头像 -->
+            <image class="item-icon" mode="widthFix" src="{{item.header}}"></image>
+            <!-- 名字 -->
+            <i> {{item.name}}</i>
+            <!-- 用时 -->
+            <span class="item-data">
+              <i class="rankpace"> {{item.timeData}}</i>
+            </span>
+            <!-- 时间 -->
+            <!-- <span class="item-data">
+                <i class="rankpace"> {{item.date}}</i>
+              </span> -->
+          </view>
+        </view>
+      </view>
+    </view>
+  </template>
+
+  <swiper current="{{currentTab}}" style="height:2600rpx" bindchange="onSlideChange">
+    <swiper-item>
+      <!-- 使用模板1 template -->
+      <template is="msgItem" data="{{ list,currentTab,openid,myList }}" />
+    </swiper-item>
+    <swiper-item>
+      <!-- 使用模板1 template -->
+      <template is="msgItem" data="{{ list,currentTab,openid,myList }}" />
+    </swiper-item>
+    <swiper-item>
+      <!-- 使用模板1 template -->
+      <template is="msgItem" data="{{ list,currentTab,openid,myList }}" />
+    </swiper-item>
+  </swiper>
+</view>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>猜数字</title>
+        <script src="/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js.js" type="text/javascript" charset="utf-8"></script>
+        <!--<link rel="stylesheet" href="//cmc.stu.126.net/u/css/cms/mooc_res_style.css">-->
+        <style type="text/css" media="all">
+        .code {
+            /*text-align: center;*/
+            margin: 10px auto;
+            font-weight: bold;
+        }
+        .code input {
+            width: 84px;
+            height: 108px;
+            line-height: 108px;
+            border-radius: 16px;
+            font-size: 75px;
+            text-align: center;
+            background: rgba(2, 2, 2, 0.1);
+            border: 4px transparent;
+            margin-right: 32px;
+            box-sizing: border-box;
+            color: black;
+        }
+        .code input:focus {
+            box-shadow:0px 0px 24px 0px rgba(191, 255, 219, 1);
+            bprder-radius: 16px;
+            border:4px solid rgba(0, 208, 92, 1);
+        }
+        .code input:last-child {
+            margin-right: 0;
+        }
+        .code span{
+            position: absolute;
+            bottom: -10px;
+        }
+        #data_rank {
+            width: 84px;
+            height: 108px;
+            line-height: 108px;
+            border-radius: 16px;
+            font-size: 28px;
+            text-align: center;
+            background: rgba(2, 2, 2, 0.1);
+            border: 4px transparent;
+            margin-right: 32px;
+            box-sizing: border-box;
+            color: black;
+            top: -20px;
+            position: relative;
+        }
+        #generate{
+            width: 84px;
+            height: 108px;
+            line-height: 108px;
+            border-radius: 16px;
+            top: -20px;
+            position: relative;
+            font-size: 28px;
+        }
+        
+        </style>
+    </head>
+    
+    <body>
+        <br />
+        <div class="code" id="begin" style="text-align:center;position: relative;"> <span>等级</span>
+
+            <select name="data_rank" id="data_rank" style="" onchange="selectChange();">
+                <option value="0" selected="">初级</option>
+                <option value="1">中级</option>
+                <option value="2">高级</option>
+            </select>
+            <span>最小值</span>
+            <input value="1" onkeyup="return keyup(event);" onkeydown="return keydown(event);" id="data_x" required="" />
+            <span>最大值</span>
+            <input value="6" onkeyup="return keyup(event);" onkeydown="return keydown(event);" id="data_y" required="" />
+            <span>个数</span>
+            <input value="4" onkeyup="return keyup(event);" onkeydown="return keydown(event);" id="data_n" required="" />
+            <span max="1">0为可重复，1为不重复</span>
+            <input value="1" onkeyup="return keyup(event);" onkeydown="return keydown(event);" id="data_r" required="" />
+            <button id="generate">开始</button>
+        </div>
+        <div id="time"></div>
+        <div id="which"></div>
+        <hr/>
+        <div id="input" style="text-align: center;"></div>
+    </body>
+
+</html>

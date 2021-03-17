@@ -1,0 +1,92 @@
+/**index.wxss**/
+.header {
+    margin: 90rpx 0 90rpx 50rpx;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    width: 650rpx;
+    height: 300rpx;
+    line-height: 450rpx;
+}
+
+
+.guide {
+  width: 100%;
+  padding: 100rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.guide .p {
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  line-height: 36rpx;
+  color: #666;
+  text-indent: 28px;
+}
+
+.header image {
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 40rpx;
+}
+ 
+.content {
+    margin-left: 50rpx;
+    margin-bottom: 90rpx;
+}
+ 
+.content text {
+    display: block;
+    color: #9d9d9d;
+    margin-top: 40rpx;
+}
+ 
+.bottom {
+    border-radius: 80rpx;
+    margin: 70rpx 50rpx;
+    font-size: 35rpx;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.rankGame {
+  margin-top: 50px;
+}
+
+.rank-game{
+  font-size: 16px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.picker{
+  font-size: 16px;
+}
+
+.playGame {
+  margin-top: 100px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.play-game{
+  /* font-size: 25px; */
+}

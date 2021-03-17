@@ -1,0 +1,51 @@
+<!--index.wxml-->
+
+<view wx:if="{{isHide}}">
+  <view wx:if="{{canIUse}}">
+    <view class='header'>
+      <image src='pages/images/6.png'></image>
+    </view>
+
+    <view class='content'>
+      <view>申请获取以下权限</view>
+      <text>获得你的公开信息(昵称，头像等)</text>
+    </view>
+
+    <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+      授权登录
+    </button>
+    <button class='bottom' type='default' bindtap="cancelLogin">
+      取消登录
+    </button>
+  </view>
+  <view wx:else>请升级微信版本</view>
+</view>
+
+<view wx:else class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" bindtap="login">点击登陆账户</button>
+    <block wx:else>
+      <image bindtap="" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view wx:if="{{hasUserInfo}}">
+    <view class="rankGame">
+      <picker class="rank-game" bindchange="bindPickerChange" value="{{index?index:0}}" range="{{array}}">
+        <button class='picker' type='default' size="mini">
+          等级：{{array[index]}}
+        </button>
+      </picker>
+
+    </view>
+    <view class="playGame">
+      <button class='play-game' type='primary' bindtap="bindViewTap">
+        {{motto}}
+      </button>
+    </view>
+  </view>
+  <view class="guide" wx:else>
+    <!-- <text class="headline">游戏使用说明</text> -->
+    <text class="p">因该小程序涉及用户昵称、头像的使用，所以需要用户的登录授权。</text>
+  </view>
+</view>

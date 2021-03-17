@@ -1,0 +1,11 @@
+<view class="code" id="begin" style="padding-top:5px;">
+  <!-- <button type="primary" bindtap="generate" class="generate">产生</button> -->
+  <button type="primary" bindtap="reBegin" class="generate">重新开始</button>
+  <view id="input" style="text-align: center;margin:10rpx;">{{timeData==""?"":x+"到"+y+"猜"+inputLenth+"个   用时："+timeData}}</view>
+</view>
+
+<block wx:for="{{timesArr}}" wx:key='index'>
+  <view class="inputtexttop">第{{index+1}}组</view>
+  <indep-password-box focus="true" class="inputbox" id="passwordBox" inputLength="{{inputLenth}}" inputWidth="{{inputWidth}}" inputHeight="{{inputHeight}}" inputDefValue="{{scanValue}}" showValue="{{true}}" bind:complete="setupPasswordComplete"></indep-password-box>
+  <view class="inputtextbottom">{{tipArr[index]}}</view>
+</block>
