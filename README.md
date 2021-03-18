@@ -21,17 +21,17 @@
 ## 程序安装说明：
 ### 需要更改的正确api接口地址（https协议）：
 
-  \GuessNumber\pages\rank\index.js
-  42行：接口文件-》xiaochengxu.php
+    \GuessNumber\pages\rank\index.js
+    42行：接口文件-》xiaochengxu.php
 
-  \GuessNumber\pages\content\index.js
-  136行：接口文件-》xiaochengxu_insert.php
+    \GuessNumber\pages\content\index.js
+    136行：接口文件-》xiaochengxu_insert.php
 
-  \GuessNumber\pages\index\index.js
-  183行：接口文件-》login.php
+    \GuessNumber\pages\index\index.js
+    183行：接口文件-》login.php
 
 ### 接口文件配置修改：
-  更改数据库连接信息：\php接口文件\xiaochengxu_insert.php（第2行）、\php接口文件\xiaochengxu.php（第2行）
-  更改小程序配置信息：\php接口文件\login.php（17、18行）、\GuessNumber\project.config.json（28行）
+    更改数据库连接信息：\php接口文件\xiaochengxu_insert.php（第2行）、\php接口文件\xiaochengxu.php（第2行）
+    更改小程序配置信息：\php接口文件\login.php（17、18行）、\GuessNumber\project.config.json（28行）
 
 
